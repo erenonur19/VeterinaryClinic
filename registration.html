@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Page</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width" initial-scale=1.0"/>
+<link rel="stylesheet" type="text/css" href="css1.css">
+<head>
+
+<body>
+<div class="header">
+<h1 style= color:Chocolate; class="header"> Healer's Veterinary Clinic Webpage</h1>
+</div>
+
+<div class="topnav">
+<form method="get" action="http://www.google.com/search" >
+<div style=padding:4px;width:15em;position:absolute;right:0px;">
+<table border="0" align="center" cellpadding="0">
+<tr><td>
+<input type="text"   name="q" size="25" style="color:#808080;"
+maxlength="255" value="Search"
+onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='black';" onblur="if(this.value=='')this.value=this.defaultValue; "/>
+<input type="submit" value="Go!" />
+<input type="hidden" name="sitesearch" value="yoursite.com" /></td></tr>
+</table>
+</div>
+
+</form>
+  <a href="index.html">Home</a>
+  <a style= background-color:MediumPurple; href="registration.html">Registration</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="team.html">Our Team</a>
+  <a href="contactme.html">Contact Me</a>
+  <a href="services.html">Our Services</a>
+  <a href="blog.html">Blog</a>
+  
+  
+ 
+
+</div>
+<div class="row">
+  <div class="column side">
+  <img src="https://img-s1.onedio.com/id-53d61b918bd1c6ae28e1d868/rev-0/w-500/s-3bf46d749bcbbc9a7ed8c8c188fa8bed441dba92.jpg" width="100%" height="100%">
+	<img src="https://galeri14.uludagsozluk.com/762/kopekler_1041724.jpg" width="100%" height="100%">
+	
+
+
+ </div>
+
+
+
+
+
+
+<div class="column middle">
+<form name="form1" action="thanks.htm" method="post" onsubmit="return validateForm()" >
+<h1> Registration Page </h1>
+
+Name: <input type="text" name="nameInput" id="namei" > <br><br>
+
+Surname: <input type="text" name="surnameInput" id="surnamei" > <br><br>
+
+Email: <input type="email" id="email" name="email" placeholder="example@hotmail.com" ><br><br>
+
+Date of Birth: <input type="text" id="birthday" name="birthday"  placeholder="11-02-1999"> <br><br>
+
+Telephone: <input type="tel" id="phoneNo" name="phoneNo" placeholder="4444-4444-333" > <br>
+
+
+<h5 style= color:red;>Your password must contain at least one number and one uppercase and lowercase letter and at least 8 and at most 16 characters!!</h5>
+Password: <input type="password" id="passw" name="passw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}" title="Must contain at least one number and one uppercase and lowercase letter and at least 8 and at most 16 characters" >  
+
+
+<br><br>
+
+Gender: (You don't have to choose) <br> Male<input type="radio" id="male" name="gender" value="male"> 
+        Female<input type="radio" id="female" name="gender" value="female"> <br><br>
+		
+		Which kind of animals you have? <br>
+		Cat<input type="checkbox" id="animal1" name="animal1" value="Cat"> 
+        Dog<input type="checkbox" id="animal2" name="animal2" value="Dog">
+		Hamster<input type="checkbox" id="animal3" name="animal3" value="Hamster"> 
+		Fish<input type="checkbox" id="animal4" name="animal4" value="Monkey"> 
+		Turtle<input type="checkbox" id="animal4" name="animal4" value="Turtle"> 
+		Bird<input type="checkbox" id="Bird" name="Bird" value="Bird"> <br><br>
+		
+		You Can Add Your Photo ( Optional )
+		<input type="file" id="photo" name="photo">  <br><br> 
+		
+		
+	 <p>About me & my pet:</p> 
+	 <textarea rows="3" cols="60" name="feedback">
+	  Please enter your text here. 
+	  </textarea> <br><br>
+	 
+	 <hr> 
+	 <input type="submit" value="Submit">
+	 <input type="reset" value="Reset">
+		
+	
+  
+  
+		
+  
+
+
+</form>
+
+<script>
+
+function validateForm(){
+
+var x=document.forms["form1"]["namei"].value;
+var y=document.forms["form1"]["surnamei"].value;
+
+if(x==""){
+alert("You must enter your name!");
+return false;
+}
+
+if (!/^[a-zA-Z]*$/g.test(document.form1.namei.value)) {
+        alert("Your name must be letter only!");
+        return false;
+   }
+   
+   if(y==""){
+alert("You must enter your surname");
+return false;
+}
+
+if (!/^[a-zA-Z]*$/g.test(document.form1.surnamei.value)) {
+        alert("Your surname must be letter only!");
+        return false;
+   }
+   
+
+ if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(form1.email.value)){
+ 
+    alert("You have entered an invalid email address!")
+    return false;
+}
+
+
+ var dob = document.forms["form1"]["birthday"].value;
+    var pattern = /^([0-9]{2})-([0-9]{2})-([0-9]{4})$/;
+    if (dob == "" || !pattern.test(dob)) {
+        alert("You have entered an invalid date of birth!");
+        return false;
+    }
+	
+	
+  var phoneNo=document.forms["form1"]["phoneNo"].value;
+  
+  var pattern2 = /^([0-9]{4})-([0-9]{4})-([0-9]{3})$/;
+	
+	if(phoneNo == "" || !pattern2.test(phoneNo)){
+	
+	alert("You have entered an invalid phone number!");
+	return false;
+	}
+	
+	
+	var password=document.forms["form1"]["passw"].value;
+	if(password==""){
+	alert("You must indicate your password!")
+	return false;
+	}
+	
+	return true;
+	
+	 
+	 
+	
+
+ 
+   
+   
+   
+   
+   
+   
+   
+
+}
+
+
+</script>
+</div>
+<div class="column side">
+<h1 style= color:PeachPuff;text-align:center>About us</h1><hr>
+<h4>As Healers Veterinary Clinic Family:</h4>
+
+Combining its 27 years of experience with a professional perspective, it works best with our animal friends by following and applying the technology, equipment and current treatments related to veterinarians and staff who work in harmony with each other, respect and love animals.
+
+
+<hr>
+<h4>Our Medicine Principle:</h4>
+
+It is the person who tries to work his best for animals by combining veterinary medicine education with his experience, with good will and love, and by adding his skill.
+
+<hr>
+
+<h4>Our Mission:</h4>
+
+To provide the best health care for all living creatures in order to distinguish between animals, owners or street animals or wildlife, according to equality and respect for living rights.
+<hr>
+
+
+<h4>Our vision:</h4>
+
+Being an exemplary clinic in our region with our innovative, principled and responsible approach.
+<hr>
+
+
+<h2>Our slogan is:<h2>
+
+Let's grow up by sharing love :-)<hr>
+	</div>
+
+<div class="footer">
+ <h3 style= color:red;>Legal warning!!</h3>
+ <p>All kinds of sound, image, text and information, documents, trademarks and all intellectual property rights published on this site belong to the respective brands, are used only by the owners and with the permission of their owners and are copyrighted.</p>
+ </div>
+
+
+</div>
+
+</body>
+</html>
